@@ -6,7 +6,7 @@ namespace Biblioteca.Models
 {
 public class Docente{
     [Key]
-    public String? codigoDocente {get; set;}
+    public int Id {get; set;}
     public String? NombreDocente {get; set;}
     
     public String? FacultadDocente {get ; set;}

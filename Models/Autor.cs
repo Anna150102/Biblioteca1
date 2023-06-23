@@ -9,8 +9,8 @@ namespace Biblioteca.Models
 public class Autor{
    
    [Key]
-    public string? codigoAutor {get; set;}
-    public string? nombreAutores {get; set;}
-    public string? NacionalidadAutor {get ; set;}
+    public int Id {get; set;}
+    public string? Nombre_Autores {get; set;}
+    public string? Nacionalidad_Autor {get ; set;}
 }    
 }

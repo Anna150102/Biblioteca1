@@ -6,11 +6,11 @@ namespace Biblioteca.Models
 {
 public class Editorial{
     [Key]
-    public String? codigoEditorial {get; set;}
-    public String? nombreEditorial {get; set;}
-    public String? TelefonoEditorial {get ; set;}
+    public  int Id {get; set;}
+    public String? Nombre_Editorial {get; set;}
+    public String? Telefono_Editorial {get ; set;}
    
-    public String? ContactoEditorial {get; set;}
+    public String? Contacto_Editorial {get; set;}
    
    
 }    

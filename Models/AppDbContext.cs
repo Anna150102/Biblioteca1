@@ -15,5 +15,6 @@ namespace Biblioteca.Models
           public DbSet<Editorial> Editoriales {get;set;}
            public DbSet<Genero> Generos {get;set;}
             public DbSet<Libros> Libros {get;set;}
+            public DbSet<Prestamo> Prestamos{get;set;}
     }
 }
