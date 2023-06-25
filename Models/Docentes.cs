@@ -4,20 +4,16 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 namespace Biblioteca.Models
 {
-public class Genero{
+public class Docentes{
     [Key]
     public int Id {get; set;}
     [Required]
-    [Display(Name = "Genero Literario")]
+    [Display(Name = "Nombre de Docente")]
     [StringLength(100,MinimumLength =2)]
     public String? Nombre {get; set;}
     [Required]
-    [Display(Name = "Descipcion de Genero")]
+    [Display(Name = "Facultad de Docente")]
     [StringLength(100,MinimumLength =2)]
-    public String? Descripcion_Genero {get ; set;}
-   
-   
-   
-   
+    public String? Facultad{get ; set;}
 }    
 }

@@ -1,22 +1,22 @@
-@model IEnumerable<Biblioteca.Models.Docente>
+@model IEnumerable<Biblioteca.Models.Docentes>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Docentes";
 }
 
-<h1>Index</h1>
+<h1>Docentes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-outline-dark">Create New</a>
 </p>
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NombreDocente)
+                @Html.DisplayNameFor(model => model.Nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FacultadDocente)
+                @Html.DisplayNameFor(model => model.Facultad)
             </th>
             <th></th>
         </tr>
@@ -25,10 +25,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.NombreDocente)
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FacultadDocente)
+                @Html.DisplayFor(modelItem => item.Facultad)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

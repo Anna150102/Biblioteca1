@@ -24,21 +24,27 @@
             @Html.DisplayFor(model => model.Descripcion_Prestamo)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Libros_Id)
+            @Html.DisplayNameFor(model => model.Estado)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Libros_Id)
+            @Html.DisplayFor(model => model.Estado)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Docete_Id)
+            @Html.DisplayNameFor(model => model.Libros)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Docete_Id)
+            @Html.DisplayFor(model => model.Libros.Descripcion_Libro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Docentes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Docentes.Facultad)
         </dd>
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="Codigo_Prestamo" />
+        <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

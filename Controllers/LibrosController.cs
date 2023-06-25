@@ -21,9 +21,8 @@ namespace Biblioteca.Controllers
         // GET: Libros
         public async Task<IActionResult> Index()
         {
-              return _context.Libros != null ? 
-                          View(await _context.Libros.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Libros'  is null.");
+            var appDbContext = _context.Libros.Include(l => l.Autor).Include(l => l.Editorial).Include(l => l.Genero);
+            return View(await appDbContext.ToListAsync());
         }
 
         // GET: Libros/Details/5
@@ -35,6 +34,9 @@ namespace Biblioteca.Controllers
             }
 
             var libros = await _context.Libros
+                .Include(l => l.Autor)
+                .Include(l => l.Editorial)
+                .Include(l => l.Genero)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (libros == null)
             {
@@ -45,8 +47,11 @@ namespace Biblioteca.Controllers
         }
 
         // GET: Libros/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            ViewBag.Autores= await _context.Autores.ToListAsync();
+            ViewBag.Editoriales= await _context.Editoriales.ToListAsync();
+            ViewBag.Generos = await _context.Generos.ToListAsync();
             return View();
         }
 
@@ -55,7 +60,7 @@ namespace Biblioteca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre_Libro,Existencias_Libro,Precio_Libro,Descripcion_Libro,Autor_Id,Editorial_Id,Genero_Id")] Libros libros)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Existencias_Libro,Precio_Libro,Descripcion_Libro,AutorId,EditorialId,GeneroId")] Libros libros)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +68,9 @@ namespace Biblioteca.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AutorId"] = new SelectList(_context.Autores, "Id", "Nacionalidad", libros.AutorId);
+            ViewData["EditorialId"] = new SelectList(_context.Editoriales, "Id", "Contacto", libros.EditorialId);
+            ViewData["GeneroId"] = new SelectList(_context.Generos, "Id", "Descripcion_Genero", libros.GeneroId);
             return View(libros);
         }
 
@@ -79,6 +87,9 @@ namespace Biblioteca.Controllers
             {
                 return NotFound();
             }
+            ViewData["AutorId"] = new SelectList(_context.Autores, "Id", "Nombre", libros.AutorId);
+            ViewData["EditorialId"] = new SelectList(_context.Editoriales, "Id", "Nombre", libros.EditorialId);
+            ViewData["GeneroId"] = new SelectList(_context.Generos, "Id", "Nombre", libros.GeneroId);
             return View(libros);
         }
 
@@ -87,7 +98,7 @@ namespace Biblioteca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre_Libro,Existencias_Libro,Precio_Libro,Descripcion_Libro,Autor_Id,Editorial_Id,Genero_Id")] Libros libros)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Existencias_Libro,Precio_Libro,Descripcion_Libro,AutorId,EditorialId,GeneroId")] Libros libros)
         {
             if (id != libros.Id)
             {
@@ -114,6 +125,9 @@ namespace Biblioteca.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AutorId"] = new SelectList(_context.Autores, "Id", "Nombre", libros.AutorId);
+            ViewData["EditorialId"] = new SelectList(_context.Editoriales, "Id", "Nombre", libros.EditorialId);
+            ViewData["GeneroId"] = new SelectList(_context.Generos, "Id", "Nombre", libros.GeneroId);
             return View(libros);
         }
 
@@ -126,6 +140,9 @@ namespace Biblioteca.Controllers
             }
 
             var libros = await _context.Libros
+                .Include(l => l.Autor)
+                .Include(l => l.Editorial)
+                .Include(l => l.Genero)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (libros == null)
             {

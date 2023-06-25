@@ -21,13 +21,12 @@ namespace Biblioteca.Controllers
         // GET: Prestamo
         public async Task<IActionResult> Index()
         {
-              return _context.Prestamos != null ? 
-                          View(await _context.Prestamos.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Prestamos'  is null.");
+            var appDbContext = _context.Prestamos.Include(p => p.Docentes).Include(p => p.Libros);
+            return View(await appDbContext.ToListAsync());
         }
 
         // GET: Prestamo/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Prestamos == null)
             {
@@ -35,7 +34,9 @@ namespace Biblioteca.Controllers
             }
 
             var prestamo = await _context.Prestamos
-                .FirstOrDefaultAsync(m => m.Codigo_Prestamo == id);
+                .Include(p => p.Docentes)
+                .Include(p => p.Libros)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (prestamo == null)
             {
                 return NotFound();
@@ -45,8 +46,11 @@ namespace Biblioteca.Controllers
         }
 
         // GET: Prestamo/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+                 ViewBag.Libros = await _context.Libros.ToListAsync();
+            ViewBag.Docentes = await _context.Docentes.ToListAsync();
+        
             return View();
         }
 
@@ -55,7 +59,7 @@ namespace Biblioteca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Codigo_Prestamo,Fecha_Prestamo,Descripcion_Prestamo,Libros_Id,Docete_Id")] Prestamo prestamo)
+        public async Task<IActionResult> Create([Bind("Id,Fecha_Prestamo,Descripcion_Prestamo,Estado,LibrosId,DocentesId")] Prestamo prestamo)
         {
             if (ModelState.IsValid)
             {
@@ -63,11 +67,13 @@ namespace Biblioteca.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Facultad", prestamo.DocentesId);
+            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Descripcion_Libro", prestamo.LibrosId);
             return View(prestamo);
         }
 
         // GET: Prestamo/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Prestamos == null)
             {
@@ -79,6 +85,8 @@ namespace Biblioteca.Controllers
             {
                 return NotFound();
             }
+            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Facultad", prestamo.DocentesId);
+            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Descripcion_Libro", prestamo.LibrosId);
             return View(prestamo);
         }
 
@@ -87,9 +95,9 @@ namespace Biblioteca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Codigo_Prestamo,Fecha_Prestamo,Descripcion_Prestamo,Libros_Id,Docete_Id")] Prestamo prestamo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Fecha_Prestamo,Descripcion_Prestamo,Estado,LibrosId,DocentesId")] Prestamo prestamo)
         {
-            if (id != prestamo.Codigo_Prestamo)
+            if (id != prestamo.Id)
             {
                 return NotFound();
             }
@@ -103,7 +111,7 @@ namespace Biblioteca.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PrestamoExists(prestamo.Codigo_Prestamo))
+                    if (!PrestamoExists(prestamo.Id))
                     {
                         return NotFound();
                     }
@@ -114,11 +122,13 @@ namespace Biblioteca.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Facultad", prestamo.DocentesId);
+            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Descripcion_Libro", prestamo.LibrosId);
             return View(prestamo);
         }
 
         // GET: Prestamo/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Prestamos == null)
             {
@@ -126,7 +136,9 @@ namespace Biblioteca.Controllers
             }
 
             var prestamo = await _context.Prestamos
-                .FirstOrDefaultAsync(m => m.Codigo_Prestamo == id);
+                .Include(p => p.Docentes)
+                .Include(p => p.Libros)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (prestamo == null)
             {
                 return NotFound();
@@ -138,7 +150,7 @@ namespace Biblioteca.Controllers
         // POST: Prestamo/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Prestamos == null)
             {
@@ -154,9 +166,9 @@ namespace Biblioteca.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PrestamoExists(string id)
+        private bool PrestamoExists(int id)
         {
-          return (_context.Prestamos?.Any(e => e.Codigo_Prestamo == id)).GetValueOrDefault();
+          return (_context.Prestamos?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

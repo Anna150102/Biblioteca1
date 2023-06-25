@@ -55,7 +55,7 @@ namespace Biblioteca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre_Autores,Nacionalidad_Autor")] Autor autor)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Nacionalidad")] Autor autor)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace Biblioteca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre_Autores,Nacionalidad_Autor")] Autor autor)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Nacionalidad")] Autor autor)
         {
             if (id != autor.Id)
             {

@@ -10,7 +10,15 @@ public class Autor{
    
    [Key]
     public int Id {get; set;}
-    public string? Nombre_Autores {get; set;}
-    public string? Nacionalidad_Autor {get ; set;}
+    [Required]
+    [Display(Name = "Nombre de Autor")]
+    [StringLength(100,MinimumLength =2)]
+    public string? Nombre {get; set;}
+    [Required]
+    [Display(Name = "Nacionalidad del Autor")]
+    [StringLength(100,MinimumLength =2)]
+    public string? Nacionalidad {get ; set;}
+
+   
 }    
 }

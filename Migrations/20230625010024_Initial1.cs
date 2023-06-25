@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Biblioteca.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigrate : Migration
+    public partial class Initial1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,9 +20,9 @@ namespace Biblioteca.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nombre_Autores = table.Column<string>(type: "longtext", nullable: true)
+                    Nombre = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Nacionalidad_Autor = table.Column<string>(type: "longtext", nullable: true)
+                    Nacionalidad = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -37,9 +37,9 @@ namespace Biblioteca.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NombreDocente = table.Column<string>(type: "longtext", nullable: true)
+                    Nombre = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    FacultadDocente = table.Column<string>(type: "longtext", nullable: true)
+                    Facultad = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -54,11 +54,11 @@ namespace Biblioteca.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nombre_Editorial = table.Column<string>(type: "longtext", nullable: true)
+                    Nombre = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Telefono_Editorial = table.Column<string>(type: "longtext", nullable: true)
+                    Telefono_Editorial = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Contacto_Editorial = table.Column<string>(type: "longtext", nullable: true)
+                    Contacto = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -73,9 +73,9 @@ namespace Biblioteca.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nombre_Genero = table.Column<string>(type: "longtext", nullable: true)
+                    Nombre = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Descripcion_Genero = table.Column<string>(type: "longtext", nullable: true)
+                    Descripcion_Genero = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -90,18 +90,16 @@ namespace Biblioteca.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nombre_Libro = table.Column<string>(type: "longtext", nullable: true)
+                    Nombre = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Existencias_Libro = table.Column<int>(type: "int", nullable: false),
-                    Precio_Libro = table.Column<float>(type: "float", nullable: false),
-                    Descripcion_Libro = table.Column<string>(type: "longtext", nullable: true)
+                    Precio_Libro = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Autor_Id = table.Column<int>(type: "int", nullable: false),
-                    Editorial_Id = table.Column<int>(type: "int", nullable: false),
-                    Genero_Id = table.Column<int>(type: "int", nullable: false),
-                    AutorId = table.Column<int>(type: "int", nullable: true),
-                    EditorialId = table.Column<int>(type: "int", nullable: true),
-                    GeneroId = table.Column<int>(type: "int", nullable: true)
+                    Descripcion_Libro = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    AutorId = table.Column<int>(type: "int", nullable: false),
+                    EditorialId = table.Column<int>(type: "int", nullable: false),
+                    GeneroId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -110,17 +108,20 @@ namespace Biblioteca.Migrations
                         name: "FK_Libros_Autores_AutorId",
                         column: x => x.AutorId,
                         principalTable: "Autores",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Libros_Editoriales_EditorialId",
                         column: x => x.EditorialId,
                         principalTable: "Editoriales",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Libros_Generos_GeneroId",
                         column: x => x.GeneroId,
                         principalTable: "Generos",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -128,30 +129,32 @@ namespace Biblioteca.Migrations
                 name: "Prestamos",
                 columns: table => new
                 {
-                    Codigo_Prestamo = table.Column<string>(type: "varchar(255)", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Fecha_Prestamo = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Fecha_Prestamo = table.Column<string>(type: "longtext", nullable: true)
+                    Descripcion_Prestamo = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Descripcion_Prestamo = table.Column<string>(type: "longtext", nullable: true)
+                    Estado = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Libros_Id = table.Column<int>(type: "int", nullable: false),
-                    Docete_Id = table.Column<int>(type: "int", nullable: false),
-                    LibrosId = table.Column<int>(type: "int", nullable: true),
-                    DocenteId = table.Column<int>(type: "int", nullable: true)
+                    LibrosId = table.Column<int>(type: "int", maxLength: 100, nullable: false),
+                    DocenteId = table.Column<int>(type: "int", nullable: false),
+                    DocentesId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Prestamos", x => x.Codigo_Prestamo);
+                    table.PrimaryKey("PK_Prestamos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Prestamos_Docentes_DocenteId",
-                        column: x => x.DocenteId,
+                        name: "FK_Prestamos_Docentes_DocentesId",
+                        column: x => x.DocentesId,
                         principalTable: "Docentes",
                         principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Prestamos_Libros_LibrosId",
                         column: x => x.LibrosId,
                         principalTable: "Libros",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -171,9 +174,9 @@ namespace Biblioteca.Migrations
                 column: "GeneroId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Prestamos_DocenteId",
+                name: "IX_Prestamos_DocentesId",
                 table: "Prestamos",
-                column: "DocenteId");
+                column: "DocentesId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Prestamos_LibrosId",

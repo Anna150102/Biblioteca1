@@ -1,19 +1,19 @@
 @model IEnumerable<Biblioteca.Models.Genero>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Genero";
 }
 
-<h1>Index</h1>
+<h1>Genero</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-outline-dark">Create New</a>
 </p>
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nombre_Genero)
+                @Html.DisplayNameFor(model => model.Nombre)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion_Genero)
@@ -25,7 +25,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nombre_Genero)
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Descripcion_Genero)
