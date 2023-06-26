@@ -9,157 +9,157 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Biblioteca
 build_property.RootNamespace = Biblioteca
-build_property.ProjectDir = c:\Users\33010\OneDrive\Escritorio\Biblioteca\
+build_property.ProjectDir = C:\Users\andre\OneDrive\Escritorio\Nueva carpeta\Amor\Biblioteca1\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = c:\Users\33010\OneDrive\Escritorio\Biblioteca
+build_property.MSBuildProjectDirectory = C:\Users\andre\OneDrive\Escritorio\Nueva carpeta\Amor\Biblioteca1
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Autor/Create.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Autor/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Autor/Delete.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Autor/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Autor/Details.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Autor/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Autor/Edit.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Autor/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Autor/Index.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Autor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Docentes/Create.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Docentes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Docentes/Delete.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Docentes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Docentes/Details.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Docentes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Docentes/Edit.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Docentes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Docentes/Index.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Docentes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Editorial/Create.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Editorial/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdG9yaWFsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Editorial/Delete.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Editorial/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdG9yaWFsXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Editorial/Details.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Editorial/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdG9yaWFsXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Editorial/Edit.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Editorial/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdG9yaWFsXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Editorial/Index.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Editorial/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdG9yaWFsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Genero/Create.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Genero/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Genero/Delete.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Genero/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Genero/Details.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Genero/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Genero/Edit.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Genero/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Genero/Index.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Genero/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Home/Index.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Home/Privacy.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Libros/Create.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Libros/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Libros/Delete.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Libros/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Libros/Details.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Libros/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Libros/Edit.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Libros/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Libros/Index.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Libros/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Prestamo/Create.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Prestamo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Prestamo/Delete.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Prestamo/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Prestamo/Details.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Prestamo/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Prestamo/Edit.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Prestamo/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Prestamo/Index.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Prestamo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3RhbW9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Shared/Error.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/_ViewImports.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/_ViewStart.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/33010/OneDrive/Escritorio/Biblioteca/Views/Shared/_Layout.cshtml]
+[C:/Users/andre/OneDrive/Escritorio/Nueva carpeta/Amor/Biblioteca1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bunr9m1pqn

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\33010\\OneDrive\\Escritorio\\Biblioteca\\Biblioteca.csproj": {}
+    "C:\\Users\\andre\\OneDrive\\Escritorio\\Nueva carpeta\\Amor\\Biblioteca1\\Biblioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\33010\\OneDrive\\Escritorio\\Biblioteca\\Biblioteca.csproj": {
+    "C:\\Users\\andre\\OneDrive\\Escritorio\\Nueva carpeta\\Amor\\Biblioteca1\\Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\33010\\OneDrive\\Escritorio\\Biblioteca\\Biblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Escritorio\\Nueva carpeta\\Amor\\Biblioteca1\\Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "C:\\Users\\33010\\OneDrive\\Escritorio\\Biblioteca\\Biblioteca.csproj",
-        "packagesPath": "C:\\Users\\33010\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\33010\\OneDrive\\Escritorio\\Biblioteca\\obj\\",
+        "projectPath": "C:\\Users\\andre\\OneDrive\\Escritorio\\Nueva carpeta\\Amor\\Biblioteca1\\Biblioteca.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\OneDrive\\Escritorio\\Nueva carpeta\\Amor\\Biblioteca1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\33010\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

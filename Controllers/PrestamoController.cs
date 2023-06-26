@@ -48,7 +48,7 @@ namespace Biblioteca.Controllers
         // GET: Prestamo/Create
         public async Task<IActionResult> Create()
         {
-                 ViewBag.Libros = await _context.Libros.ToListAsync();
+            ViewBag.Libros = await _context.Libros.ToListAsync();
             ViewBag.Docentes = await _context.Docentes.ToListAsync();
         
             return View();
