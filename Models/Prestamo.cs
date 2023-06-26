@@ -24,9 +24,6 @@ public class Prestamo{
     [Display(Name = "Defina Estado")]
     [StringLength(50,MinimumLength =2)]
     public string? Estado {get ; set;}
-       [Required]
-    [Display(Name = "Nombre del Libro")]
-    [StringLength(100,MinimumLength =2)]
    
     public int LibrosId {get; set;}
     public int DocentesId {get; set;}
