@@ -67,8 +67,8 @@ namespace Biblioteca.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Facultad", prestamo.DocentesId);
-            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Descripcion_Libro", prestamo.LibrosId);
+            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Nombre", prestamo.DocentesId);
+            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Nombre", prestamo.LibrosId);
             return View(prestamo);
         }
 
@@ -85,8 +85,8 @@ namespace Biblioteca.Controllers
             {
                 return NotFound();
             }
-            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Facultad", prestamo.DocentesId);
-            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Descripcion_Libro", prestamo.LibrosId);
+            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Nombre", prestamo.DocentesId);
+            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Nombre", prestamo.LibrosId);
             return View(prestamo);
         }
 
@@ -122,8 +122,8 @@ namespace Biblioteca.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Facultad", prestamo.DocentesId);
-            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Descripcion_Libro", prestamo.LibrosId);
+            ViewData["DocentesId"] = new SelectList(_context.Docentes, "Id", "Nombre", prestamo.DocentesId);
+            ViewData["LibrosId"] = new SelectList(_context.Libros, "Id", "Nombre", prestamo.LibrosId);
             return View(prestamo);
         }
 
